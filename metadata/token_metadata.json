@@ -1,0 +1,32 @@
+{
+    "name": "Attoo Token",
+    "description": "Attoo - Une cryptomonnaie écologique basée sur Algorand",
+    "image": "https://raw.githubusercontent.com/PureToken510/attoo-assets/main/assets/logo/attoo_logo.png",
+    "external_url": "https://github.com/PureToken510/attoo_testV1",
+    "properties": {
+        "decimals": 6,
+        "supply": "500000000000000000",
+        "ticker": "ATTOO",
+        "version": "1.0",
+        "category": "Environmental",
+        "created_at": "2024",
+        "eco_friendly": true,
+        "website": "https://your-website.com",
+        "social": {
+            "twitter": "https://twitter.com/your_handle",
+            "telegram": "https://t.me/your_group"
+        },
+        "technical": {
+            "platform": "Algorand",
+            "contract_type": "ASA",
+            "network": "TestNet",
+            "addresses": {
+                "creator": "T3FACGSQVJ4VUYTORKJNMQ6GAOPNXHEKGJVHUN7XMZICIZESDW44AIP6JI",
+                "manager": "T3FACGSQVJ4VUYTORKJNMQ6GAOPNXHEKGJVHUN7XMZICIZESDW44AIP6JI",
+                "reserve": "T3FACGSQVJ4VUYTORKJNMQ6GAOPNXHEKGJVHUN7XMZICIZESDW44AIP6JI",
+                "freeze": "T3FACGSQVJ4VUYTORKJNMQ6GAOPNXHEKGJVHUN7XMZICIZESDW44AIP6JI",
+                "clawback": "T3FACGSQVJ4VUYTORKJNMQ6GAOPNXHEKGJVHUN7XMZICIZESDW44AIP6JI"
+            }
+        }
+    }
+} 
