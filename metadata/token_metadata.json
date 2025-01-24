@@ -7,7 +7,7 @@ def create_attoo_metadata():
     metadata = {
         "name": "Attoo Token",
         "description": "Attoo - Une cryptomonnaie écologique basée sur Algorand",
-        "image": "https://raw.githubusercontent.com/PureToken510/attoo_testV1/715ced79c610b76054bf850e9380e371eff19c1b0153948ddb1ba06d51cdfee9/assets/logo/logo.png",
+        "image": "https://github.com/PureToken510/attoo_testV1/blob/ebc21a986d373fec5185a363ffaa4cea196b3a34/assets/logo/logo.png",
         "image_integrity": "sha256-715ced79c610b76054bf850e9380e371eff19c1b0153948ddb1ba06d51cdfee9",
         "image_mimetype": "png",
         "properties": {
