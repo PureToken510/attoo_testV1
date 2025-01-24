@@ -5,13 +5,15 @@ from pathlib import Path
 def create_attoo_metadata():
     """Crée le fichier de métadonnées pour Attoo Token"""
     metadata = {
+        "standard": "arc69",
         "name": "Attoo Token",
         "description": "Attoo - Une cryptomonnaie écologique basée sur Algorand",
         "image": "https://github.com/PureToken510/attoo_testV1/blob/main/assets/logo/ATTOOLOGO.png?raw=true",
         "image_integrity": "sha256-44fa0f285423980212b8516fa1f4519467d92deb699a431e9bb5e3f65301ce9f",
-        "image_mimetype": "png",
+        "image_mimetype": "image/png",
+        "decimals": 6,
+        "external_url": "https://votre-site-web.com",  # Ajoutez votre URL ici
         "properties": {
-            "decimals": 6,
             "supply": "500000000000000000",
             "ticker": "ATTOO",
             "version": "1.0",
@@ -33,15 +35,8 @@ def create_attoo_metadata():
         }
     }
     
-    # Sauvegarder localement
-    metadata_path = Path("src/metadata/token_metadata.json")
-    metadata_path.parent.mkdir(parents=True, exist_ok=True)
-    
-    with open(metadata_path, "w", encoding='utf-8') as f:
-        json.dump(metadata, f, indent=4, ensure_ascii=False)
-    
-    print(f"✅ Métadonnées créées: {metadata_path}")
-    return metadata_path
+    # Le reste du code reste inchangé
+    # ...
 
 if __name__ == "__main__":
-    create_attoo_metadata() 
+    create_attoo_metadata()
