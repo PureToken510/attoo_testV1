@@ -1,32 +1,47 @@
-{
-    "name": "Attoo Token",
-    "description": "Attoo - Une cryptomonnaie écologique basée sur Algorand",
-    "image": "https://raw.githubusercontent.com/PureToken510/attoo-assets/main/assets/logo/attoo_logo.png",
-    "external_url": "https://github.com/PureToken510/attoo_testV1",
-    "properties": {
-        "decimals": 6,
-        "supply": "500000000000000000",
-        "ticker": "ATTOO",
-        "version": "1.0",
-        "category": "Environmental",
-        "created_at": "2024",
-        "eco_friendly": true,
-        "website": "https://your-website.com",
-        "social": {
-            "twitter": "https://twitter.com/your_handle",
-            "telegram": "https://t.me/your_group"
-        },
-        "technical": {
-            "platform": "Algorand",
-            "contract_type": "ASA",
-            "network": "TestNet",
-            "addresses": {
-                "creator": "T3FACGSQVJ4VUYTORKJNMQ6GAOPNXHEKGJVHUN7XMZICIZESDW44AIP6JI",
-                "manager": "T3FACGSQVJ4VUYTORKJNMQ6GAOPNXHEKGJVHUN7XMZICIZESDW44AIP6JI",
-                "reserve": "T3FACGSQVJ4VUYTORKJNMQ6GAOPNXHEKGJVHUN7XMZICIZESDW44AIP6JI",
-                "freeze": "T3FACGSQVJ4VUYTORKJNMQ6GAOPNXHEKGJVHUN7XMZICIZESDW44AIP6JI",
-                "clawback": "T3FACGSQVJ4VUYTORKJNMQ6GAOPNXHEKGJVHUN7XMZICIZESDW44AIP6JI"
+import json
+import os
+from pathlib import Path
+
+def create_attoo_metadata():
+    """Crée le fichier de métadonnées pour Attoo Token"""
+    metadata = {
+        "name": "Attoo Token",
+        "description": "Attoo - Une cryptomonnaie écologique basée sur Algorand",
+        "image": "https://raw.githubusercontent.com/PureToken510/attoo_testV1/715ced79c610b76054bf850e9380e371eff19c1b0153948ddb1ba06d51cdfee9/assets/logo/logo.png",
+        "image_integrity": "sha256-715ced79c610b76054bf850e9380e371eff19c1b0153948ddb1ba06d51cdfee9",
+        "image_mimetype": "png",
+        "properties": {
+            "decimals": 6,
+            "supply": "500000000000000000",
+            "ticker": "ATTOO",
+            "version": "1.0",
+            "category": "Environmental",
+            "created_at": "2024",
+            "eco_friendly": True,
+            "technical": {
+                "platform": "Algorand",
+                "contract_type": "ASA",
+                "network": "TestNet",
+                "addresses": {
+                    "creator": "T3FACGSQVJ4VUYTORKJNMQ6GAOPNXHEKGJVHUN7XMZICIZESDW44AIP6JI",
+                    "manager": "T3FACGSQVJ4VUYTORKJNMQ6GAOPNXHEKGJVHUN7XMZICIZESDW44AIP6JI",
+                    "reserve": "T3FACGSQVJ4VUYTORKJNMQ6GAOPNXHEKGJVHUN7XMZICIZESDW44AIP6JI",
+                    "freeze": "T3FACGSQVJ4VUYTORKJNMQ6GAOPNXHEKGJVHUN7XMZICIZESDW44AIP6JI",
+                    "clawback": "T3FACGSQVJ4VUYTORKJNMQ6GAOPNXHEKGJVHUN7XMZICIZESDW44AIP6JI"
+                }
             }
         }
     }
-} 
+    
+    # Sauvegarder localement
+    metadata_path = Path("src/metadata/token_metadata.json")
+    metadata_path.parent.mkdir(parents=True, exist_ok=True)
+    
+    with open(metadata_path, "w", encoding='utf-8') as f:
+        json.dump(metadata, f, indent=4, ensure_ascii=False)
+    
+    print(f"✅ Métadonnées créées: {metadata_path}")
+    return metadata_path
+
+if __name__ == "__main__":
+    create_attoo_metadata() 
